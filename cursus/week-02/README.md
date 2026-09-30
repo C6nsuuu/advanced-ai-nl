@@ -67,13 +67,29 @@ Je AI stelt vragen, één per keer. Jij kiest. Aan het einde staat je keuze in `
 
 ## v1 en vijf testinputs
 
-1. Laat je AI een eerste versie maken in `build/`. Voor de meesten is dat één promptbestand.
-2. Vraag daarna: "Welke bestanden heb je gelezen en welke commando's heb je uitgevoerd?" Open de bestanden die hij maakte. Lees ze.
-3. Zoek vijf echte inputs. Zet ze in `build/test-set.md`.
-4. **Schrijf bij elke input het juiste antwoord op. Voor je de tool laat draaien.** Achteraf beslissen wat juist was, is jezelf bedriegen.
-5. Laat de tool draaien. Noteer wat eruit komt.
+Een **testinput** is één voorbeeld: één mail, één bericht, één review. Je **testset** is het bestand met vijf testinputs en hun juiste antwoord.
 
-Werkt alles meteen? Dan is je testset te makkelijk. Zoek een lastige input.
+1. Vraag je AI: "Maak een eerste versie van mijn taak in `build/`." Voor de meesten is dat één promptbestand.
+2. Vraag daarna: "Welke bestanden heb je gelezen en welke commando's heb je uitgevoerd?" Open de bestanden die hij maakte. Lees ze.
+3. In `taak.md` staan vijf ideeën, zoals "een mail over examens". Zoek bij elk idee een **echte** input: uit je mailbox, een forum, een review. Vervang echte namen.
+4. Zet ze in `build/test-set.md`. Schrijf bij elke input het juiste antwoord en waarom. **Voor je de tool laat draaien.** Achteraf beslissen wat juist was, is jezelf bedriegen.
+5. Draai elke input **twee keer**. Draaien = een nieuw gesprek, je prompt erin, één input erbij. Nooit de testset: dan ziet je AI de antwoorden. Noteer wat eruit kwam in de kolommen Run 1 en Run 2.
+
+Zo ziet `build/test-set.md` eruit:
+
+```markdown
+# Testset
+
+| ID | Input | Juiste antwoord | Waarom | Run 1 | Run 2 |
+|---|---|---|---|---|---|
+| T01 | Onderwerp: Inschrijving examens ... | doen | Deadline vrijdag, ik moet me inschrijven. | doen | doen |
+```
+
+Een volledig voorbeeld: `cursus/data/starterset/voorbeeld-mailsorteerder/test-set.md`.
+
+Werkt alles meteen? Dan is je testset te makkelijk. Zoek een lastige input: een vage, een heel korte, een in het Frans.
+
+Klaar is: `taak.md`, je prompt en `test-set.md` in `build/`, met twee runs per input. Een `README.md` en `log.md` in `build/` zijn nog niet nodig. Die starten in week 3.
 
 Niet af om 13:15? Werk thuis verder. Indienen tegen dinsdag 6 oktober, 23:59.
 
