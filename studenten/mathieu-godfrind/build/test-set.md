@@ -4,11 +4,11 @@ Juiste antwoord = label (`GO` / `NO-GO` / `ONZEKER`) en bij `NO-GO` de risico's 
 
 | ID | Input | Juiste antwoord | Waarom | Run 1 | Run 2 |
 |---|---|---|---|---|---|
-| T01 | Tote bag — zie T01 hieronder | GO | Het is een gewone katoenen tas zonder merknaam, geen elektronica, licht en niet breekbaar, dus geen van de vier risico's. "Patronen: Cartoon" is op zich geen probleem, maar het is goed als de tool het aankaart. | | |
-| T02 | Hoesje voor AirPods Pro — zie T02 hieronder | GO | Het is een siliconen hoesje dat het merk alleen noemt om te zeggen waarvoor het past, geen namaak. Geen elektronica, licht en niet breekbaar. | | |
-| T03 | USB-oplader 20W — zie T03 hieronder | GO | Het is een oplader met CE-markering, zonder merknaam van een ander merk, klein en niet breekbaar. | | |
-| T04 | Glazen parfumflesjes — zie T04 hieronder | NO-GO (C) | De flesjes zijn van glas en dus breekbaar, wat verzending duurder maakt en tot meer retours door breuk leidt. | | |
-| T05 | Vage titel + foto — zie T05 hieronder | ONZEKER | De titel is een reeks zoekwoorden en de specificaties zijn bijna leeg, dus uit de tekst weet je niet wat het product is of waaruit het bestaat. | | |
+| T01 | Tote bag — zie T01 hieronder | GO | Het is een gewone katoenen tas zonder merknaam, geen elektronica, licht en niet breekbaar, dus geen van de vier risico's. "Patronen: Cartoon" is op zich geen probleem, maar het is goed als de tool het aankaart. | GO | GO |
+| T02 | Hoesje voor AirPods Pro — zie T02 hieronder | GO | Het is een siliconen hoesje dat het merk alleen noemt om te zeggen waarvoor het past, geen namaak. Geen elektronica, licht en niet breekbaar. | GO | GO |
+| T03 | USB-oplader 20W — zie T03 hieronder | GO | Het is een oplader met CE-markering, zonder merknaam van een ander merk, klein en niet breekbaar. | GO | GO |
+| T04 | Glazen parfumflesjes — zie T04 hieronder | NO-GO (C) | De flesjes zijn van glas en dus breekbaar, wat verzending duurder maakt en tot meer retours door breuk leidt. | NO-GO (C) | NO-GO (C) |
+| T05 | Vage titel + foto — zie T05 hieronder | ONZEKER | De titel is een reeks zoekwoorden en de specificaties zijn bijna leeg, dus uit de tekst weet je niet wat het product is of waaruit het bestaat. | ONZEKER | ONZEKER |
 
 ## Inputs
 
@@ -519,4 +519,79 @@ Aangepaste verpakking(+ vanaf /Min. bestelling: 500 sets)
 Afbeeldingen bewerken(+ vanaf /Min. bestelling: 1.000 sets)
 
 Beschrijving: geen
+```
+
+## Antwoorden van de tool (v1, claude.ai)
+
+### T01 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een katoenen draagtas zonder merknaam of merklogo, zonder elektronica of batterij, klein en licht verpakt ("0.3 kg"), en niet verboden of beperkt op bol.com.
+```
+
+### T01 run 2
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een katoenen draagtas zonder merknaam (alleen "OEM"), zonder elektronica, batterij of andere CE-plichtige kenmerken, compact verpakt (15X15X5 cm, 0.3 kg) en niet verboden op bol.com.
+```
+
+### T02 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een siliconen beschermhoesje dat alleen zegt waarop het past ("Voor Apple Airpods/Airpods pro"), zonder merklogo, zonder elektronica of batterij, klein en licht (0.030 kg) en niet verboden.
+```
+
+### T02 run 2
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een siliconen hoesje dat alleen vermeldt waarop het past ("Voor Apple Airpods/Airpods pro"), zonder merklogo of woorden als "replica"; het is geen elektrisch apparaat, geen batterij, niet breekbaar (0.030 kg) en niet verboden op bol.com.
+```
+
+### T03 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een elektrische oplader waarvoor "CE-gecertificeerd" en "Declaration of Conformity" op de pagina staan, het is niet breekbaar, zwaar of vloeibaar, en er is geen merknaam van derden of een verboden productcategorie te vinden.
+```
+
+### T03 run 2
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Het is een elektrische oplader waarvan de pagina CE-certificering vermeldt ("CE-gecertificeerd"), er staat geen merkkopie of merklogo op het product (alleen de eigen merknaam "SChitec/OEM"), en het is een compact, niet-breekbaar product dat niet onder verboden categorieën valt.
+```
+
+### T04 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Parfumflesje, rechthoekige glazen parfumfles 50 ml, lege parfumfles 100 ml met doos." — Het product is een glazen fles, en glas is breekbaar en dus moeilijk veilig te verzenden.
+UITLEG: Het is een lege glazen parfumfles, en breekbaar glas is al genoeg voor een NO-GO.
+```
+
+### T04 run 2
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+C: "Parfumflesje, rechthoekige glazen parfumfles 50 ml, lege parfumfles 100 ml met doos." — Glas is breekbaar en dus moeilijk veilig te verzenden.
+UITLEG: Het product is een lege glazen parfumfles, en breekbaar glas is een verzendrisico.
+```
+
+### T05 run 1
+```
+OORDEEL: ONZEKER
+RISICO'S: geen
+UITLEG: De pagina zegt niet wat het product precies is (alleen vage termen als "Fotogeschenken" en "Promotionele Novelty Gifts", zonder beschrijving of materiaal), dus de risico's zijn niet te beoordelen.
+```
+
+### T05 run 2
+```
+OORDEEL: ONZEKER
+RISICO'S: geen
+UITLEG: De pagina toont niet wat het product is of waaruit het bestaat: alleen algemene termen als "Fotogeschenken" en vier uiteenlopende producttypes (kantoor, huishoudelijk, elektronisch, novelty), zonder beschrijving, materiaal of CE-informatie.
 ```
