@@ -30,7 +30,7 @@ Vorige week deed je AI veel dingen die je niet zag. Vandaag kijk je onder de mot
 | 12:00 | Pauze |
 | 12:10 | Vier klasgenoten stellen hun taak voor |
 | 12:25 | v1 bouwen, vijf testinputs |
-| 13:15 | Post en pull request |
+| 13:15 | Post en pull request · brainstorm-skill meenemen |
 
 ## Start
 
@@ -55,15 +55,13 @@ De skills van de cursus staan in `.claude/skills/`. Een map die met een punt beg
 
 ## De brainstorm
 
-Plak dit in je tool:
+De skill staat al in de cursusrepo, sinds `start week 2`. Typ:
 
-```
-Lees https://raw.githubusercontent.com/alexandernacho/advanced-ai-nl/main/.claude/skills/brainstorm/SKILL.md. Installeer deze skill globaal voor mijn tool. Start hem dan: ik wil kiezen wat ik bouw voor de cursus.
-```
+| Claude | Codex |
+|---|---|
+| `/brainstorm wat ik bouw voor de cursus` | `brainstorm: wat ik bouw voor de cursus` |
 
 Je AI stelt vragen, één per keer. Jij kiest. Aan het einde staat je keuze in `build/taak.md`.
-
-De skill is van jou. Hij werkt ook buiten de cursus, voor alles wat je wil bouwen. Typ gewoon "brainstorm".
 
 **Om 12:00 ligt je taak vast.** Geen taak gevonden? Neem het voorbeeld uit `cursus/data/starterset/`.
 
@@ -97,3 +95,13 @@ Bestand: `posts/week-02.md`. Halve pagina.
 ```
 
 Indienen: typ `dien week 2 in`.
+
+## Neem de brainstorm mee
+
+Klaar met indienen? Zet de skill globaal op je laptop. Dan werkt hij ook buiten de cursus, voor alles wat je wil bouwen. Plak dit in je tool:
+
+```
+Lees https://raw.githubusercontent.com/alexandernacho/advanced-ai-nl/main/.claude/skills/brainstorm/SKILL.md. Installeer deze skill globaal voor mijn tool. Start hem niet.
+```
+
+Daarna typ je overal gewoon "brainstorm".
