@@ -4,7 +4,7 @@
 Uit de gekopieerde tekst van één vakpagina alle opdrachten met hun deadline halen.
 
 ## Wat erin gaat
-De geplakte tekst van één vakpagina (Chamilo/Leho of het platform van het vak).
+De geplakte tekst van één vakpagina (Canvas).
 
 ## Wat eruit komt
 Een lijst — opdracht, deadline — met "geen duidelijke deadline — zelf controleren" als er geen datum in de tekst staat.
