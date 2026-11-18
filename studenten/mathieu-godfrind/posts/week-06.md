@@ -15,6 +15,9 @@
 
 Claude las bij beide runs eerst mijn memory. Een extra run met Research-modus (36 zoekopdrachten) vond wel Bellus Toys en megamaga.be.
 
+### Waarom die wel, en die niet?
+Merkandi toont prijzen en lange productteksten aan iedereen, bij Megamaga moet je inloggen voor prijzen en staan er vooral foto's met korte teksten, dus een AI vindt daar weinig om te lezen.
+
 ## Kan AI dit bedrijf vinden?
 <Je GEO-audit van één bedrijf: zes criteria, score en bewijs per criterium, je totaal op 18, en één tactiek.>
 
