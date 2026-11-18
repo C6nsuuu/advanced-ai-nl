@@ -19,7 +19,21 @@ Claude las bij beide runs eerst mijn memory. Een extra run met Research-modus (3
 Merkandi toont prijzen en lange productteksten aan iedereen, bij Megamaga moet je inloggen voor prijzen en staan er vooral foto's met korte teksten, dus een AI vindt daar weinig om te lezen.
 
 ## Kan AI dit bedrijf vinden?
-<Je GEO-audit van één bedrijf: zes criteria, score en bewijs per criterium, je totaal op 18, en één tactiek.>
+
+Megamaga (megamaga.be, Kruisem)
+
+| Criterium | Score | Bewijs |
+|---|---|---|
+| 1 · Gestructureerde data | 0/3 | https://www.megamaga.be/nl/beer-grijs-pluche-15cm.html toont geen Product, Offer of Organization, alleen og:type website. Prijs "€--,--", "Log hier in om prijzen te zien". |
+| 2 · Leesbaar voor AI | 1/3 | Prijzen achter login, korte afgekapte teksten, sjabloontekst "Button text" en "Custom price filter title". |
+| 3 · Vermeldingen door anderen | 1/3 | Alleen in bedrijfsregisters (companyweb.be, creditsafe), geen reviews, fora of pers gevonden. |
+| 4 · Echt genoemd in AI-antwoorden | 1/3 | Claude 0 keer in 2 runs, Google AI-modus en een Research-run wel. |
+| 5 · Autoriteit | 1/3 | Over ons toont alleen adres en btw (Mega Import BV), geen jaartal, cijfers of erkenning. |
+| 6 · Zoeken op merknaam | 1/3 | Op "megamaga" alleen komen games, met "megamaga groothandel" wel de site. |
+
+**Totaal: 5 op 18, onzichtbaar.**
+
+**Tactiek:** echte productteksten op elke productpagina zetten (wat het is, maat, materiaal, minimale afname) en de sjabloontekst weghalen, zodat een AI iets kan lezen, ook zonder prijs.
 
 ## Mijn tool leest een bron
 <Welk document, en waarom. Je score: x op 5. Eén geval waar het fout ging, en waarom denk je?>
