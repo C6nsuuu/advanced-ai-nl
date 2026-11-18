@@ -31,7 +31,7 @@ Mijn eerste tactiek voor Ford Geeraerts: de dealerwebsite wordt vanuit Ford op d
 
 ## Mijn tool leest een bron
 
-Ik gebruikte de officiële Ford Mustang Mach-E-prijslijst in `build/bronnen/prijslijst-ford-mustang-mach-e.pdf`.
+Ik gebruikte de officiële Ford Mustang Mach-E-prijslijst in `build/bronnen/prijslijst-ford-mustang-mach-e.md`.
 
 Ik koos dit document omdat de prijslijst veel informatie bevatte, terwijl openingsuren slechts enkele lijnen met dagen en uren zijn.
 

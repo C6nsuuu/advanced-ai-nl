@@ -1,6 +1,6 @@
 # Testset bron (B01–B05)
 
-**Bron:** `build/bronnen/prijslijst-ford-mustang-mach-e.pdf`
+**Bron:** `build/bronnen/prijslijst-ford-mustang-mach-e.md`
 
 Het juiste antwoord, en waar het in het document staat, schrijf je vóór de eerste run.
 B01–B04: het document geeft het antwoord. B05: het document geeft het antwoord níet.
