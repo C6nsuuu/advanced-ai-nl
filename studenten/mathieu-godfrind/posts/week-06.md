@@ -31,7 +31,7 @@ Megamaga (megamaga.be, Kruisem)
 | 5 · Autoriteit | 1/3 | Over ons toont alleen adres en btw (Mega Import BV), geen jaartal, cijfers of erkenning. |
 | 6 · Zoeken op merknaam | 1/3 | Op "megamaga" alleen komen games, met "megamaga groothandel" wel de site. |
 
-**Totaal: 6 op 18, onzichtbaar (net).**
+**Totaal: 7 op 18, marginaal (net).**
 
 **Tactiek:** echte productteksten op elke productpagina zetten (wat het is, maat, materiaal, minimale afname) en de sjabloontekst weghalen, zodat een AI iets kan lezen, ook zonder prijs.
 
