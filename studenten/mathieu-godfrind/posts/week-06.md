@@ -1,4 +1,4 @@
-# Week 6: <titel in je eigen woorden>
+# Week 6: Mijn tool vond een regel die ik zelf niet kende
 
 ## Mijn live query
 
@@ -36,4 +36,13 @@ Megamaga (megamaga.be, Kruisem)
 **Tactiek:** echte productteksten op elke productpagina zetten (wat het is, maat, materiaal, minimale afname) en de sjabloontekst weghalen, zodat een AI iets kan lezen, ook zonder prijs.
 
 ## Mijn tool leest een bron
-<Welk document, en waarom. Je score: x op 5. Eén geval waar het fout ging, en waarom denk je?>
+
+Ik koos de catalogusregels van Vinted als document. Mijn risico D ging nog over bol.com, maar ik verkoop op Vinted, dus dat klopte niet meer. Ik schreef 5 vragen met mijn antwoord eerst en liet ze draaien met Haiku 5.5. Score: 4 op 5.
+
+Let op: de vragen liepen niet via mijn prompt v4, die is gemaakt voor productpagina's, maar via een korte instructie met het document erbij. Ik testte dus vooral of het model het document goed leest.
+
+B01 was maar half juist. De tool zei dat speelgoed mag, maar zei niets over Vinted Pro of regelmatig verkopen. Ik denk dat hij gewoon de eerste regel pakte die paste en niet verder zocht in het document.
+
+Het grootste wat ik leerde: Vinted verbiedt het doorverkopen van nieuwe spullen die je in bulk of bij een leverancier koopt, ook met Vinted Pro. Dat is net wat ik doe met mijn knuffels. Dat wist ik niet. Ik moet dus nadenken of Vinted wel de juiste plek is.
+
+Nadeel: het document is lang (8.798 woorden), dus elke run kost meer dan vroeger.
