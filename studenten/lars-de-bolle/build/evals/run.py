@@ -1,5 +1,6 @@
 # Draait een promptversie tegen de 12 inputs van test-set.md, n keer, op één model.
 #   OPENAI_API_KEY=... python3 run.py <model> <promptbestand> <runs> [T01 T02 ...]
+# Met INPUTS=bron-inputs.json draait hij B01-B05 uit test-set-bron.md in plaats van T01-T12.
 # Schrijft out/<model>__<prompt>__<id>_r<n>.json: ruwe uitvoer plus tokens.
 # Bestaat een bestand al, dan wordt het overgeslagen: afbreken en hervatten mag.
 import json, os, sys, time, urllib.request
@@ -12,7 +13,7 @@ ONLY   = sys.argv[4:] or None
 TAG    = os.path.basename(PFILE).replace(".txt", "")
 
 prompt = open(PFILE).read()
-inputs = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "inputs.json")))
+inputs = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.environ.get("INPUTS", "inputs.json"))))
 
 def call(text):
     body = {"model": MODEL,
