@@ -18,7 +18,7 @@ Daaruit komt een concept-offerte in zijn eigen huisstijl.
 | `test-set.md` | Twaalf inputs met het juiste antwoord vooraf, en 24 runs |
 | `log.md` | Wat ik veranderde en wat ermee gebeurde |
 | `bronnen/fod-btw-verbouwen.md` | De bron van week 6: FOD Financiën over het btw-tarief bij verbouwen (CC0) |
-| `test-set-bron.md` | B01 tot B05: vijf vragen aan de bron, het antwoord vooraf |
+| `test-set-bron.md` | B01 tot B05: vijf werfopnames voor de bron, antwoord vooraf, 4 op 5 |
 | `live-query.md` | Week 6: wat AI antwoordt als Joeri een offerte-app zoekt |
 | `geo-audit.md` | Week 6: kan AI Robaws vinden? Zes criteria, 12 op 18 |
 

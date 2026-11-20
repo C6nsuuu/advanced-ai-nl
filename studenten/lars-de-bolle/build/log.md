@@ -46,8 +46,28 @@ uit `test-set-bron.md`. `run.py` draait die met `INPUTS=bron-inputs.json`.
 `toon.py` toont het btw-veld. `inputs.json`, `prompt-v2.txt` en `prompt-v3.txt`
 bleven byte voor byte gelijk.
 
-**Nog niet gedraaid.** Eerst B01 tot B05 met het antwoord vooraf, dan één run op
-GPT-6 Luna.
+**Resultaat: 4 op 5** (n = 5, 1 run, GPT-6 Luna, 20 november 2026). De testset
+lag vast in commit `5011275`, voor de eerste run.
+
+**De fout, B04.** Een uitbreiding van 80 m2 aan een huis met 60 m2: volgens de
+bron nieuwbouw, dus 21 procent. De tool maakte geen enkele post en stelde drie
+vragen over de hoeveelheden. Daarna deed de regel uit v4 wat hij zegt: geen
+posten, dan btw leeg. De bron werd niet verkeerd gelezen. Twee regels uit de
+prompt botsten, dezelfde soort fout als de botsing in week 3.
+
+**Uit de bron of uit het geheugen?** B03: bij een praktijkruimte koos de tool 21
+procent, met een zin uit het voorbeeld van FOD Financiën. B05: voor een werf in
+Breda viel hij niet terug op Nederlandse btw-regels, maar zei hij dat de bron het
+niet zegt.
+
+**Kleiner.** B01 citeerde de inleiding, terwijl `deel` naar "Ouderdom van de
+woning" wees. B03 kortte het citaat in.
+
+**Kost.** 0,00102 euro per run. De bron maakt de invoer bijna dubbel zo lang:
+5.730 tokens per run, tegen gemiddeld 3.070 voor v3.
+
+**Volgende stap, nog niet gedaan.** De btw-regel losmaken van de posten: ook
+zonder post een tarief bepalen als de opname het werk en de woning beschrijft.
 
 ## De ene wijziging: 2 op 2 juist, en de fout is weg
 
