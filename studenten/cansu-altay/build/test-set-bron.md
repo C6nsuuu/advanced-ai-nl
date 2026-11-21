@@ -1,6 +1,6 @@
 # Testset bron (B01–B05)
 
-**Bron:** `build/bronnen/Fitnessgids_Oefeningen_en_Techniek.docx`
+**Bron:** `build/bronnen/Fitnessgids_Oefeningen_en_Techniek.txt`
 
 Het juiste antwoord, en waar het in het document staat, schrijf je vóór de eerste run.
 B01–B04: het document geeft het antwoord. B05: het document geeft het antwoord níet.

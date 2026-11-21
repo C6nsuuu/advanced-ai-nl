@@ -33,4 +33,4 @@ Hevy werd mogelijk wel genoemd omdat de app meer reviews heeft, op de eigen webs
 
 ## Mijn tool leest een bron
 
-Ik koos de [Fitnessgids Oefeningen en Techniek](../build/bronnen/Fitnessgids_Oefeningen_en_Techniek.docx), omdat die uitleg geeft over oefeningen en techniek. Ik beoordeelde vijf vragen en gaf **5 op 5**. Bij B05 gaf de tool aan dat de gids geen exacte rusttijd per oefening vermeldt. Bij B02 noemde de tool de bovenkant van de borst als bestemming van de stang. Ik vond dat voldoende voor de vraag, ook al liet de tool de extra techniekdetails uit mijn verwachte antwoord weg. [Mijn brontest](../build/test-set-bron.md)
+Ik koos de [Fitnessgids Oefeningen en Techniek](../build/bronnen/Fitnessgids_Oefeningen_en_Techniek.txt), omdat die uitleg geeft over oefeningen en techniek. Ik beoordeelde vijf vragen en gaf **5 op 5**. Bij B05 gaf de tool aan dat de gids geen exacte rusttijd per oefening vermeldt. Bij B02 noemde de tool de bovenkant van de borst als bestemming van de stang. Ik vond dat voldoende voor de vraag, ook al liet de tool de extra techniekdetails uit mijn verwachte antwoord weg. [Mijn brontest](../build/test-set-bron.md)
