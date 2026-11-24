@@ -1,6 +1,6 @@
-# v3 — prompt
+# v5 — prompt
 
-Plak dit in een nieuw gesprek. Vervang de advertentie onderaan.
+Plak dit in een nieuw gesprek. Plak onder BRON de tekst uit `bronnen/rolex-staat.md` (alles onder de streep). Vervang de advertentie onderaan.
 
 ```text
 Je haalt gegevens uit één advertentie van een tweedehands luxehorloge. De advertentie kan in het Nederlands, Frans, Duits of Engels zijn. Geef precies één JSON-object terug, en verder niets.
@@ -28,6 +28,10 @@ Velden:
 - "munt": de munt, bv. "EUR", "CHF", "USD".
 - "verkoper": precies één van "particulier", "handelaar", "onbekend".
 - "servicegeschiedenis": een korte zin met wat er staat over service of revisie, bv. "revisie bij Rolex in 2022".
+- "staat_bron": de graad uit het document onder BRON die past bij wat de advertentie over de staat zegt. Schrijf de naam van de graad exact zoals in het document.
+  - Zegt de advertentie niets over de staat: "onbekend".
+  - Past geen enkele graad uit het document: "staat niet in het document".
+- "staat_bron_deel": het deel van het document waarop "staat_bron" steunt: de kop van de graad en een korte letterlijke zin eruit. Bij "onbekend" of "staat niet in het document": "—".
 
 Regels:
 - Gebruik alleen wat letterlijk in de advertentie staat.
@@ -35,9 +39,13 @@ Regels:
 - Vul nooit iets aan uit eigen kennis. Leid bv. het merk niet af uit het referentienummer, en het bouwjaar niet uit het model.
 - Kies "onbekend" liever dan te gokken.
 - Staan er voor één veld twee verschillende waarden in de advertentie (bv. twee prijzen of twee referentienummers), of kan een waarde ook iets anders betekenen (bv. een aankoopjaar dat geen bouwjaar is)? Vul dan "onbekend" in. Want ik gebruik deze gegevens later om prijzen te vergelijken en koopjes te vinden, en een verkeerde waarde is erger dan een lege.
+- Voor "staat_bron" en "staat_bron_deel" gebruik je alleen het document onder BRON. Niet je eigen kennis over graderingen. Bevat het document het antwoord niet, zeg dat dan eerlijk met "staat niet in het document".
 
 Formaat:
-{"merk": "...", "model": "...", "referentienummer": "...", "bouwjaar": ..., "staat": "...", "doos_papieren": "...", "vraagprijs": ..., "munt": "...", "verkoper": "...", "servicegeschiedenis": "..."}
+{"merk": "...", "model": "...", "referentienummer": "...", "bouwjaar": ..., "staat": "...", "doos_papieren": "...", "vraagprijs": ..., "munt": "...", "verkoper": "...", "servicegeschiedenis": "...", "staat_bron": "...", "staat_bron_deel": "..."}
+
+BRON
+[plak de tekst uit bronnen/rolex-staat.md]
 
 ADVERTENTIE
 Titel: [plak de titel]
