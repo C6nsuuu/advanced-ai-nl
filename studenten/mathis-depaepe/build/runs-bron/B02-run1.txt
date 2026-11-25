@@ -1,0 +1,1 @@
+{"merk": "onbekend", "model": "onbekend", "referentienummer": "onbekend", "bouwjaar": "onbekend", "staat": "zeer goed", "doos_papieren": "onbekend", "vraagprijs": "onbekend", "munt": "onbekend", "verkoper": "onbekend", "servicegeschiedenis": "onbekend", "staat_bron": "Excellent", "staat_bron_deel": "Excellent - A watch in this condition will show very slight signs of wear."}

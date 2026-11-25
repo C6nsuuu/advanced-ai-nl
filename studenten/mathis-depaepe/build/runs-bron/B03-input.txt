@@ -1,0 +1,54 @@
+Je haalt gegevens uit één advertentie van een tweedehands luxehorloge. De advertentie kan in het Nederlands, Frans, Duits of Engels zijn. Geef precies één JSON-object terug, en verder niets.
+
+Velden:
+- "merk": het merk, bv. "Rolex".
+- "model": de modelnaam, bv. "Submariner Date".
+- "referentienummer": het referentienummer zoals het in de advertentie staat, bv. "126610LN".
+- "bouwjaar": het jaar als getal, bv. 2019.
+- "staat": precies één van "nieuw", "zeer goed", "gedragen", "beschadigd".
+  - "nieuw": nooit gedragen, ongedragen, stickers nog aanwezig.
+  - "zeer goed": gedragen, maar nauwelijks gebruikssporen.
+  - "gedragen": duidelijke gebruikssporen, krassen.
+  - "beschadigd": defect, kapot onderdeel, werkt niet goed.
+- "doos_papieren": precies één van "full set", "enkel doos", "enkel papieren", "geen", "onbekend".
+  - "full set": een doos én een garantiekaart of certificaat worden apart genoemd.
+  - "enkel doos": een doos wordt apart genoemd, maar geen garantiekaart of certificaat.
+  - "enkel papieren": een garantiekaart of certificaat wordt apart genoemd, maar geen doos.
+  - "geen": de advertentie zegt letterlijk dat er geen doos en geen papieren bij zijn (bv. "zonder originele doos, zonder originele papieren").
+  - "onbekend": de advertentie noemt geen doos, garantiekaart of certificaat apart, en zegt ook niet dat ze ontbreken.
+  - "papieren" betekent garantiekaart of certificaat. Een factuur alleen telt niet als papieren.
+  - Een algemene vermelding van "papieren" (bv. "Papiere", "papiers", "Unterlagen"), ook in de titel, volstaat niet. Alleen een expliciet genoemde garantiekaart of certificaat telt als papieren.
+  - "Full set" of "Full-Set" alleen telt niet als doos of papieren, want het zegt niet welke onderdelen erbij zitten. Tel alleen een doos, garantiekaart of certificaat die apart genoemd worden.
+- "vraagprijs": het bedrag als getal, zonder punten of munt, bv. 12500.
+- "munt": de munt, bv. "EUR", "CHF", "USD".
+- "verkoper": precies één van "particulier", "handelaar", "onbekend".
+- "servicegeschiedenis": een korte zin met wat er staat over service of revisie, bv. "revisie bij Rolex in 2022".
+- "staat_bron": de graad uit het document onder BRON die past bij wat de advertentie over de staat zegt. Schrijf de naam van de graad exact zoals in het document.
+  - Zegt de advertentie niets over de staat: "onbekend".
+  - Past geen enkele graad uit het document: "staat niet in het document".
+- "staat_bron_deel": het deel van het document waarop "staat_bron" steunt: de kop van de graad en een korte letterlijke zin eruit. Bij "onbekend" of "staat niet in het document": "—".
+
+Regels:
+- Gebruik alleen wat letterlijk in de advertentie staat.
+- Staat iets er niet, of is het niet duidelijk? Vul "onbekend" in.
+- Vul nooit iets aan uit eigen kennis. Leid bv. het merk niet af uit het referentienummer, en het bouwjaar niet uit het model.
+- Kies "onbekend" liever dan te gokken.
+- Staan er voor één veld twee verschillende waarden in de advertentie (bv. twee prijzen of twee referentienummers), of kan een waarde ook iets anders betekenen (bv. een aankoopjaar dat geen bouwjaar is)? Vul dan "onbekend" in. Want ik gebruik deze gegevens later om prijzen te vergelijken en koopjes te vinden, en een verkeerde waarde is erger dan een lege.
+- Voor "staat_bron" en "staat_bron_deel" gebruik je alleen het document onder BRON. Niet je eigen kennis over graderingen. Bevat het document het antwoord niet, zeg dat dan eerlijk met "staat niet in het document".
+
+Formaat:
+{"merk": "...", "model": "...", "referentienummer": "...", "bouwjaar": ..., "staat": "...", "doos_papieren": "...", "vraagprijs": ..., "munt": "...", "verkoper": "...", "servicegeschiedenis": "...", "staat_bron": "...", "staat_bron_deel": "..."}
+
+BRON
+Bob's Watches grades the condition of our watches based on the following list of terms.
+
+Unworn - Mint condition with no signs of wear.
+Excellent - A watch in this condition will show very slight signs of wear.
+Very Good - Light to normal wear by a careful owner.
+Good - This watch shows signs of wear and may have some minor scratches or marks on the case, bezel, or bracelet. However, it remains in proper working order and retains its original integrity. A great choice for someone who values function and history over purely aesthetic appeal.
+Vintage - These watches are generally 30 years or older and condition can vary.
+
+ADVERTENTIE
+Titel:
+Tekst: Die Uhr hat bei der 3 zwei kleine Kratzer auf der Lünette
+Verkoper:

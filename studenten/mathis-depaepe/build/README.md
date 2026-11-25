@@ -34,7 +34,11 @@ Nodig: Node.js en Claude Code (`claude`), ingelogd.
    - `Txx-runN.raw.json`: de volledige uitvoer, met tokens en kost.
 4. Vergelijk elk veld met `test-set.md` en schrijf het resultaat in `log.md`.
 
-De runs van 2026-10-20 staan in `runs-v4/`.
+De runs van 2026-10-20 staan in `runs-v4/`. Let op: `prompt.md` is nu v5. Voor een exacte herhaling van v4: zet `prompt-v4.md` terug als `prompt.md`.
+
+### v5 met bron: B01–B05
+
+`run-bron.mjs` werkt zoals `run-v4.mjs`, met drie verschillen: het vult de tekst uit `bronnen/rolex-staat.md` in onder BRON, het leest de advertenties uit `test-set-bron.md` (B01–B05), en het doet één run. Typ `node run-bron.mjs runs-bron-nieuw`. De runs van 2026-11-24 (`claude-haiku-5-5`) staan in `runs-bron/`.
 
 ## Versies
 
@@ -44,3 +48,4 @@ De runs van 2026-10-20 staan in `runs-v4/`.
 | v2 | 2026-10-13 | Full-Set-regel bij `doos_papieren`, uitleg van alle vijf waarden van `doos_papieren` | Full-Set-regel na fout T04; uitleg van de waarden na de buurtest |
 | v3 | 2026-10-13 | Uitweg-regel: twee waarden voor één veld, of een waarde die iets anders kan betekenen → "onbekend", met een want. v2 bewaard in `prompt-v2.md` | Fouten T06, T08, T09 in Run 1 (F1) |
 | v4 | 2026-10-20 | "onbekend" als derde optie bij `verkoper`. v3 bewaard in `prompt-v3.md` | Fout T10 verkoper in Run 1 (F1): de prompt liet geen "onbekend" toe |
+| v5 | 2026-11-24 | Bron `bronnen/rolex-staat.md` (Bob's Watches, condition grading) in de prompt. Twee nieuwe velden: `staat_bron` en `staat_bron_deel`. Zegt eerlijk "staat niet in het document". v4 bewaard in `prompt-v4.md` | Week 6: de tool leest een bron. Testset: `test-set-bron.md` (B01–B05) |
