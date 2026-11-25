@@ -13,5 +13,9 @@ for f in sorted(glob.glob("out/*.json"), key=lambda x: (x.split("__")[2], x)):
         print("%s %-10s %-9s r%d | %dp %sC %dv | %s" % (d["id"], d["model"], d["prompt"],
               d["run"], len(p), "+" if j.get("correcties") else "-",
               len(j.get("vragen", [])), " ;; ".join(p)))
+        if "btw" in j:  # vanaf v4: het tarief, het deel van de bron, en de vragen voluit
+            b = j["btw"] or {}
+            print("    btw %s | %s | %s | vragen: %s" % (b.get("tarief"), b.get("deel"),
+                  b.get("citaat"), " / ".join(j.get("vragen", []))))
     except Exception:
         print("%s %-10s %-9s r%d | PARSE FOUT: %r" % (d["id"], d["model"], d["prompt"], d["run"], d["tekst"][:80]))

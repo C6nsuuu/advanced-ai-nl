@@ -9,7 +9,8 @@ Wat ik veranderde en wat ermee gebeurde. Nieuwste bovenaan.
 | v1 | `prompt-v1.md` | week 2, zes regels zonder waarom, geen voorbeelden |
 | v2 | niet bewaard | audit: zes bouwstenen compleet, drie voorbeelden, elke regel een want |
 | v2b | `prompt-v2.md` | buurtest: acht regelconflicten opgelost, plus de keuze van de sloopwerkpost |
-| v3 | `prompt.md` | de ene wijziging na run 1 en 2 |
+| v3 | `prompt-v3.md` | de ene wijziging na run 1 en 2 |
+| v4 | `prompt.md` | week 6: de tool leest een bron, de btw-pagina van FOD Financiën |
 
 **Een onzuiverheid die ik moet melden.** De eerste vijf runs van run 1 (T01, T05,
 T07, T08, T10) liepen op v2 zonder de regel die zegt welke sloopwerkpost je
@@ -18,6 +19,55 @@ had dat verschil kunnen uitmaken, want daar gaat het precies om sloopwerk. In
 beide gevallen gaven run 1 en run 2 hetzelfde antwoord, dus vermoedelijk
 veranderde de regel daar niets. Maar vermoedelijk is geen bewijs, en formeel is
 dat voor die twee geen zuivere n = 2.
+
+## Week 6, v4: de tool leest een bron
+
+**Wat veranderde.** De tool krijgt één echt document: de pagina van FOD
+Financiën over het btw-tarief bij verbouwen, in `bronnen/fod-btw-verbouwen.md`
+(CC0, opgehaald op 19 november 2026). Ze past in het contextvenster, dus geen
+stukjes en geen databank. De uitvoer kreeg één veld bij: `btw`, met het tarief
+(6, 21 of null), de kop uit de bron (`deel`) en een letterlijk citaat. Staat het
+antwoord niet in de bron, dan zegt de tool "staat niet in het document". Zegt de
+opname niet hoe oud de woning is, dan vraagt de tool het. Alle regels van v3
+bleven staan.
+
+**Waarom btw.** Elke offerte van Joeri voor een particulier heeft een btw-tarief
+nodig, en v3 rekende alles excl. btw zonder er iets over te zeggen. 6 of 21
+procent is het grootste bedrag dat in een offerte kan verschuiven.
+
+**Een gat in de bron.** De pagina vermeldt niet dat verwarming op fossiele
+brandstoffen sinds juli 2025 onder 21 procent valt. Dat staat alleen in de
+gedetailleerde PDF-lijst van FOD Financiën, en die mag je niet zonder
+toestemming overnemen. Een tool die alleen deze pagina leest, heeft dus geen
+grond om een gasketel anders te behandelen dan ander renovatiewerk.
+
+**Harnas.** `haal-op.py` plakt de bron in `prompt-v4.txt` en haalt B01 tot B05
+uit `test-set-bron.md`. `run.py` draait die met `INPUTS=bron-inputs.json`.
+`toon.py` toont het btw-veld. `inputs.json`, `prompt-v2.txt` en `prompt-v3.txt`
+bleven byte voor byte gelijk.
+
+**Resultaat: 4 op 5** (n = 5, 1 run, GPT-6 Luna, 20 november 2026). De testset
+lag vast in commit `5011275`, voor de eerste run.
+
+**De fout, B04.** Een uitbreiding van 80 m2 aan een huis met 60 m2: volgens de
+bron nieuwbouw, dus 21 procent. De tool maakte geen enkele post en stelde drie
+vragen over de hoeveelheden. Daarna deed de regel uit v4 wat hij zegt: geen
+posten, dan btw leeg. De bron werd niet verkeerd gelezen. Twee regels uit de
+prompt botsten, dezelfde soort fout als de botsing in week 3.
+
+**Uit de bron of uit het geheugen?** B03: bij een praktijkruimte koos de tool 21
+procent, met een zin uit het voorbeeld van FOD Financiën. B05: voor een werf in
+Breda viel hij niet terug op Nederlandse btw-regels, maar zei hij dat de bron het
+niet zegt.
+
+**Kleiner.** B01 citeerde de inleiding, terwijl `deel` naar "Ouderdom van de
+woning" wees. B03 kortte het citaat in.
+
+**Kost.** 0,00102 euro per run. De bron maakt de invoer bijna dubbel zo lang:
+5.730 tokens per run, tegen gemiddeld 3.070 voor v3.
+
+**Volgende stap, nog niet gedaan.** De btw-regel losmaken van de posten: ook
+zonder post een tarief bepalen als de opname het werk en de woning beschrijft.
 
 ## De ene wijziging: 2 op 2 juist, en de fout is weg
 
