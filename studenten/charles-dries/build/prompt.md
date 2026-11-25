@@ -15,10 +15,19 @@ Kies precies één label:
 - "geen verbeterpunt": de reactie is uitsluitend positief of neutraal en bevat geen verbeterpunt.
 - "onzeker/anders": de reactie is onduidelijk, bevat meerdere onderwerpen of past in geen label.
 
-Regels:
+Regels voor het ordenen van een reactie:
 - Kies "onzeker/anders" liever dan te gokken, want één reactie met meerdere of onduidelijke problemen kan niet eerlijk één specifiek verbeterpunt voorstellen.
 - Verzin geen feiten die niet in de reactie staan.
 - Geef in "reden" één korte zin die alleen op de reactie steunt.
+
+## Bronvragen over drankregels
+
+Gebruik voor een vraag over drankregels uitsluitend `build/bronnen/reglement-feesten-en-fuiven-pepingen.txt` als bron.
+
+- Beantwoord alleen wat in dit document staat.
+- Noem bij elk antwoord het paginanummer en de titel of het onderdeel waarop je je baseert.
+- Staat het antwoord niet in het document, zeg dan letterlijk: `Dit staat niet in het drankreglement.`
+- Geef bij een bronvraag geen label en geen JSON terug; geef een kort antwoord met de bronverwijzing.
 
 Formaat:
 {"label": "locatie/bereikbaarheid|programma|catering|prijs|personeel|veiligheid|geen verbeterpunt|onzeker/anders", "reden": "..."}
@@ -35,6 +44,6 @@ Voorbeeld:
 Reactie: Ik vond het te duur.
 Uitvoer: {"label": "prijs", "reden": "De bezoeker vindt de kostprijs te hoog."}
 
-REACTIE
-[plak hier één bezoekersreactie]
+REACTIE OF BRONVRAAG
+[plak hier één bezoekersreactie, of stel één vraag over het drankreglement]
 ```
